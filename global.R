@@ -17,7 +17,7 @@ synsets <- readLines("model/chinese synset.txt")
 preprocessing <- function (img) {
   
   img <- img * 255
-  img <- img - mean(img)
+  img <- img - 128
   dim(img) <- c(dim(img), 1)
   return(img)
   
